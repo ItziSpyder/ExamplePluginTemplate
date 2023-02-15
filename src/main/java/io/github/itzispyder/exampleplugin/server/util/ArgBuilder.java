@@ -18,7 +18,7 @@ public class ArgBuilder {
      * Constructs an argument builder.
      */
     public ArgBuilder() {
-
+        this.result = " ";
     }
 
     /**
@@ -26,7 +26,7 @@ public class ArgBuilder {
      * @param begin the beginner string
      */
     public ArgBuilder(String begin) {
-        this.result = begin;
+        this.result = begin + " ";
     }
 
     /**
@@ -35,7 +35,7 @@ public class ArgBuilder {
      * @return this class
      */
     public ArgBuilder append(String string) {
-        this.result += string;
+        this.result += string + " ";
         return this;
     }
 
@@ -47,7 +47,7 @@ public class ArgBuilder {
     public ArgBuilder append(String[] args) {
         StringBuilder builder = new StringBuilder();
         for (String arg : args) builder.append(arg).append(" ");
-        this.result = builder.toString().trim();
+        this.result += builder.toString();
         return this;
     }
 
@@ -59,7 +59,7 @@ public class ArgBuilder {
     public ArgBuilder append(List<String> args) {
         StringBuilder builder = new StringBuilder();
         for (String arg : args) builder.append(arg).append(" ");
-        this.result = builder.toString().trim();
+        this.result += builder.toString();
         return this;
     }
 
@@ -71,7 +71,7 @@ public class ArgBuilder {
     public ArgBuilder append(Set<String> args) {
         StringBuilder builder = new StringBuilder();
         for (String arg : args) builder.append(arg).append(" ");
-        this.result = builder.toString();
+        this.result += builder.toString();
         return this;
     }
 
