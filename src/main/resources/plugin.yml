@@ -1,0 +1,17 @@
+name: ExamplePlugin
+version: '${version}'
+main: io.github.itzispyder.exampleplugin.ExamplePlugin
+api-version: 1.17
+authors: [ YourNameHere ]
+description: An example plugin template for Spigot/Paper.
+website: https://ItziSpyder.github.io/
+permissions:
+  example.commands:
+    description: An example permission
+    default: op
+commands:
+  example:
+    description: An example command.
+    usage: /example
+    permission: example.commands
+    permission-message: You do not have permission!
