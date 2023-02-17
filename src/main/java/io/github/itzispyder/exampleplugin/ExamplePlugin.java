@@ -30,13 +30,14 @@ public final class ExamplePlugin extends JavaPlugin {
      */
     @Override
     public void onEnable() {
-        // Plugin startup logic
-        log.info("Example plugin has loaded! (" + getDescription().getVersion() + ")");
-        starter = Config.Plugin.getPrefix() + " ";
 
         // Files
         getConfig().options().copyDefaults();
         saveDefaultConfig();
+
+        // Plugin startup logic
+        log.info("Example plugin has loaded! (" + getDescription().getVersion() + ")");
+        starter = Config.Plugin.getPrefix() + " ";
 
         // Commands -> BE SURE TO REGISTER ANY NEW COMMANDS IN PLUGIN.YML (src/main/java/resources/plugin.yml)!
         getCommand("example").setExecutor(new CommandExample());

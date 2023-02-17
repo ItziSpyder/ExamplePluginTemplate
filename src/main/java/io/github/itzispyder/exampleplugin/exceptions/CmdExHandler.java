@@ -33,7 +33,7 @@ public class CmdExHandler {
         if (exception instanceof NullPointerException) msg += "Command contains a null value!";
         else if (exception instanceof IndexOutOfBoundsException) msg += "Unknown or incomplete command!";
         else msg += exception.getMessage();
-        return msg + "\nc§cCorrect usage: §7" + command.getUsage();
+        return msg + "\n§cCorrect usage: §7" + command.getUsage();
     }
 
     public Exception getException() {
