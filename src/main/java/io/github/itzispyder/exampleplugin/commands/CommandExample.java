@@ -21,7 +21,7 @@ public class CommandExample implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         try {
-            sender.sendMessage("You've execute an example command!");
+            sender.sendMessage("You've executed an example command!");
             return true;
         } catch (Exception ex) {
             CmdExHandler handler = new CmdExHandler(ex,command);
