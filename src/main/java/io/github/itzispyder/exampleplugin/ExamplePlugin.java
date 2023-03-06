@@ -33,7 +33,7 @@ public final class ExamplePlugin extends JavaPlugin {
 
         // Files
         getConfig().options().copyDefaults();
-        saveDefaultConfig();
+        saveDefaultConfig(); 
 
         // Plugin startup logic
         log.info("Example plugin has loaded! (" + getDescription().getVersion() + ")");
